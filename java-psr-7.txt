@@ -169,7 +169,16 @@ private static HashMap<String, String> data = new HashMap();
 0-02 обязателен костнруктор без пареметров для каждого объекта:
 т.к. сохрание и загрузки объектов в файл требует дефолтный конструктор  !!
 хотя мы его сами не используем
-
+0-05 ошибка в ..extends Exception{...
+    авто-вставка-кода 1) гет/сеттеров() 2) toString()
+     3) hashCode() equals(Object obj)-могуть одни названиея, но разные коды 
+0-06 4) @Override  ---переопределяя родительский класс
+    public String getValueForComboBox ()
+0-07 5) public void postEdit () {} --обязательно позже
+Currency
+0-15 потом Account
+Transaction
+0-22 Transfer
 
 0-32
 ---- 2-5. ..фильтра

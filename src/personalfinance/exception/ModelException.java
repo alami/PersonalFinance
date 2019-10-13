@@ -11,7 +11,7 @@ package personalfinance.exception;
  */
 
 
-public class ModelException {    
+public class ModelException extends Exception{    
     
     public static final int TITLE_EMPTY = 1;
     public static final int IS_EXISTS = 2;
@@ -25,6 +25,10 @@ public class ModelException {
     public static final int NO_BASE_CURRENCY = 10;
     
     private final int code;
+    
+    public ModelException(int code) {
+        this.code = code;
+    }
     
     public String getMessage() {
         switch (code) {
@@ -50,8 +54,5 @@ public class ModelException {
                 return "ERROR_NO_BASE_CURRENCY";
         }
         return "";
-    }
-    
-    
-    public ModelException(int code) {this.code = code;}
+    }        
 }
